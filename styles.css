@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header ja navigointipalkki */
 header {
     background-color: #4e342e;
     color: #fbe9e7;
@@ -17,32 +18,24 @@ header {
     position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3.5em;
-}
-
-header p {
-    margin: 10px 0 0;
-    font-size: 1.5em;
-}
-
 nav {
-    position: absolute;
-    top: 0;
     width: 100%;
-    background-color: #6d4c41;
+    background-color: #6d4c41; /* Lämmin ruskea */
     text-align: center;
+    position: relative; /* Korjataan navigoinnin sijoittuminen */
+    top: 0;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Navigointilinkit mukautuvat mobiililaitteille */
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -55,6 +48,16 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.5em;
 }
 
 /* Sisältöalueen ja kuvien yleiset tyylit */
@@ -91,6 +94,14 @@ img {
     margin: 0 auto;
 }
 
+/* Viimeisen kuvan tyyli */
+.last-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
 /* Footer-tyylit */
 footer {
     text-align: center;
@@ -120,15 +131,14 @@ footer h2, footer p {
     }
 
     nav ul {
-        padding: 0;
+        flex-direction: column; /* Muuta navigointilinkit pystysuoraan mobiililaitteilla */
     }
 
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
-    .meat-image {
+    .meat-image, .last-image {
         max-width: 100%;
     }
 }
