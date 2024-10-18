@@ -15,17 +15,13 @@ header {
     color: #fbe9e7;
     text-align: center;
     padding: 100px 0; /* Lisää tilaa otsikon ja navigointipalkin välille */
-    margin-top: 60px; /* Varataan tila kiinteälle navigointipalkille */
 }
 
-/* Kiinteä navigointipalkki, joka pysyy ylhäällä */
+/* Kiinteä navigointipalkki, joka ei seuraa vieritystä */
 nav {
-    position: fixed;
-    top: 0;
     width: 100%;
     background-color: #6d4c41; /* Lämmin ruskea */
     text-align: center;
-    z-index: 999; /* Varmistetaan, että navigointipalkki on muiden elementtien päällä */
 }
 
 nav ul {
@@ -44,7 +40,7 @@ nav ul li {
 nav ul li a {
     color: #fbe9e7;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em; /* Pienempi fonttikoko navigointilinkeille */
     font-weight: bold;
 }
 
